@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  ### 部署 dashborad-backend
+  big-backend:
+    image: big-backend:v1.0
+    container_name: big-backend
+    restart: always
+    ports:
+      - '15000:15000'
+    environment:
+      - 'TZ=Asia/Shanghai'
+      - 'INSTANCE=1'
+      - 'DB_HOST=10.10.8.252'
+      - 'DB_PORT=3306'
+      - 'DB_NAME=backend'
+      - 'DB_PASSWD=marco@123'
+    volumes:
+      - ./upload:/backend/upload
+      - ./download:/backend/download

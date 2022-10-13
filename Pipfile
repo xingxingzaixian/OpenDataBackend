@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+python-jose = "*"
+django-filter = "*"
+loguru = "*"
+drf-spectacular = {extras = ["sidecar"], version = "*"}
+psycopg2 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+dev = "python manage.py runserver 0.0.0.0:7654"
+makemigrations = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+collect = "python manage.py collectstatic"
