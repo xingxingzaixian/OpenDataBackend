@@ -12,6 +12,7 @@ django-filter = "*"
 loguru = "*"
 drf-spectacular = {extras = ["sidecar"], version = "*"}
 psycopg2 = "*"
+qiniu = "*"
 
 [dev-packages]
 

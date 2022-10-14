@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'django_filters',
     'user',
     'page',
-    'images'
+    'images',
+    'dataset'
 ]
 
 MIDDLEWARE = [
@@ -203,3 +204,10 @@ FILE_URL = '/download/'
 
 # 上传文件格式
 UPLOAD_FORMAT = ('.jpeg', '.png', '.jpg', '.zip', '.gif', 'jpeg', 'png', 'jpg', 'zip', 'gif')
+
+# 七牛云Access/Secret Key
+QINIU_AK = os.environ.get('QINIU_AK')
+QINIU_SK = os.environ.get('QINIU_SK')
+QINIU_BUCKET = os.environ.get('QINIU_BUCKET')
+QINIU_URL = os.environ.get('QINIU_URL')
+IMAGE_FLODER = 'temp/'

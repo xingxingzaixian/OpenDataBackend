@@ -28,7 +28,8 @@ urlpatterns = [
     path('interface/', include('interface.urls')),
     path('user/', include('user.urls')),
     path('page/', include('page.urls')),
-    path('image/', include('images.urls'))
+    path('image/', include('images.urls')),
+    path('dataset/', include('dataset.urls'))
 ]
 
 # 生产环境中使 API 文档也可访问
