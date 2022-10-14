@@ -36,7 +36,6 @@ class PageViewset(ModelViewSet):
     
     def get_serializer_class(self):
         if self.action == 'list':
-            print(self.action)
             self.serializer_class = SimplePageSerializers
         return super().get_serializer_class()
     
