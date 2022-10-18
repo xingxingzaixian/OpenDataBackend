@@ -1,5 +1,16 @@
 FROM ubuntu:20.04
 
+ENV DB_HOST localhost
+ENV DB_PORT 5432
+ENV DB_NAME opendata
+ENV DB_NAME root
+ENV DB_PASSWD 123456
+ENV SECRET_KEY 
+ENV QINIU_AK 
+ENV QINIU_SK 
+ENV QINIU_BUCKET 
+ENV QINIU_URL http://image.xingxingzaixian.fun/
+
 ADD . /backend
 
 WORKDIR /backend
