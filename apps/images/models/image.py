@@ -7,7 +7,7 @@ from utils.models import BaseModel
 class TblImage(BaseModel):
     md5 = models.CharField(max_length=64, unique=True, help_text='文件MD5值')
     url = models.CharField(max_length=256, help_text='文件地址')
-
+    is_lock = models.PositiveSmallIntegerField(default=0, help_text='是否锁定')
 
     def show_pic(self):
         return format_html(f'<img src="{self.url}">')

@@ -1,1 +1,1 @@
-from .image import ImageSerializers, DelImageSerializers
+from .image import ImageSerializers, DelImageSerializers, UploadImageSerializers

@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-  ### 部署 dashborad-backend
   big-backend:
     image: opendatav:v1.0
     container_name: opendatav
@@ -14,4 +13,4 @@ services:
       - 'DB_HOST=10.10.8.252'
       - 'DB_PORT=3306'
       - 'DB_NAME=backend'
-      - 'DB_PASSWD=marco@123'
+      - 'DB_PASSWD=123456'
