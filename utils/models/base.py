@@ -8,6 +8,7 @@ class BaseModel(models.Model):
     author = models.ForeignKey(UserModel, on_delete=models.SET_NULL, blank=True, null=True)
     create_at = models.DateTimeField(auto_now_add=True, help_text='创建时间')
     update_at = models.DateTimeField(auto_now=True, help_text='更新时间')
+    is_lock = models.PositiveSmallIntegerField(default=0, help_text='是否锁定')
     
     class Meta:
         abstract = True

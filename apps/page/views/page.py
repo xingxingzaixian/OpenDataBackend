@@ -28,6 +28,7 @@ logger = getLogger('request')
 class PageViewset(ModelViewSet):
     queryset = TblPage.objects.all()
     serializer_class = PageSerializers
+    authentication_classes = []
     
     def get_authenticators(self):
         if self.request and self.request.method and self.request.method == 'GET':

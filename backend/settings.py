@@ -26,7 +26,7 @@ if not LOG_PATH.exists():
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = '6%6kdxz*7umr5x0r1j4xd)qv2u_^d)n62twp_1!@l%8@kiyyyd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', True)
