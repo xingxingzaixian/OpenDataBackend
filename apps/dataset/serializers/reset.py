@@ -9,3 +9,12 @@ class ResetSerializers(serializers.ModelSerializer):
     class Meta:
         model = TblReset
         fields = ('id', 'name', 'author', 'method', 'url', 'headers', 'params', 'data', 'createDate', 'updateDate')
+        
+        
+class SingleResetSerializers(serializers.ModelSerializer):
+    createDate = serializers.DateTimeField(source='create_at', read_only=True)
+    updateDate = serializers.DateTimeField(source='create_at', read_only=True)
+    
+    class Meta:
+        model = TblReset
+        fields = '__all__'

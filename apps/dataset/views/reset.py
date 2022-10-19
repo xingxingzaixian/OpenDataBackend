@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 from drf_spectacular.utils import extend_schema, extend_schema_view
 
-from dataset.models import TblStatic
-from dataset.serializers import StaticSerializers, SimpleStaticSerializers
+from dataset.serializers import ResetSerializers
+from dataset.models import TblReset
 
 
 @extend_schema_view(
@@ -12,15 +12,10 @@ from dataset.serializers import StaticSerializers, SimpleStaticSerializers
     destroy=extend_schema(summary='删除静态数据'),
     retrieve=extend_schema(summary='获取静态数据')
 )
-class StaticViewSet(ModelViewSet):
-    queryset = TblStatic.objects.all()
-    serializer_class = StaticSerializers
+class ResetViewSet(ModelViewSet):
+    queryset = TblReset.objects.all()
+    serializer_class = ResetSerializers
     authentication_classes = []
-
-    def get_serializer_class(self):
-        if self.action == 'list':
-            self.serializer_class = SimpleStaticSerializers
-        return super().get_serializer_class()
     
     def perform_create(self, serializer):
         return super().perform_create(serializer)

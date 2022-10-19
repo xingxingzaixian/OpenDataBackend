@@ -11,7 +11,7 @@ from drf_spectacular.utils import extend_schema, extend_schema_view
 from images.models import TblImage
 from images.serializers import ImageSerializers, DelImageSerializers
 from utils.auth.permissions import IsSuperUser
-from utils.qiniu import delete_qiniu_image, upload_image
+from utils.qiniu import delete_qiniu_image
 
 
 @extend_schema_view(
