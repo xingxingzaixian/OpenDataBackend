@@ -1,3 +1,3 @@
 from .static import StaticViewSet
-from .reset import ResetViewSet
+from .rest import RestViewSet
 from .script import ScriptViewSet

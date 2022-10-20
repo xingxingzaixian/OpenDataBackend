@@ -1,3 +1,3 @@
 from .static import StaticSerializers, SimpleStaticSerializers
-from .reset import ResetSerializers
+from .rest import RestSerializers
 from .script import ScriptSerializers

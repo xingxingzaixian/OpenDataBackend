@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 from drf_spectacular.utils import extend_schema, extend_schema_view
 
-from dataset.serializers import ResetSerializers
-from dataset.models import TblReset
+from dataset.serializers import RestSerializers
+from dataset.models import TblRest
 
 
 @extend_schema_view(
@@ -12,9 +12,9 @@ from dataset.models import TblReset
     destroy=extend_schema(summary='删除静态数据'),
     retrieve=extend_schema(summary='获取静态数据')
 )
-class ResetViewSet(ModelViewSet):
-    queryset = TblReset.objects.all()
-    serializer_class = ResetSerializers
+class RestViewSet(ModelViewSet):
+    queryset = TblRest.objects.all()
+    serializer_class = RestSerializers
     authentication_classes = []
     
     def perform_create(self, serializer):

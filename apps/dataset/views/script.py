@@ -15,3 +15,4 @@ from dataset.serializers import ScriptSerializers
 class ScriptViewSet(ModelViewSet):
     queryset = TblScript.objects.all()
     serializer_class = ScriptSerializers
+    authentication_classes = []
